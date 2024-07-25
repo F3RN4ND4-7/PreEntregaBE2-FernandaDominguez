@@ -67,7 +67,7 @@ router.post("/register", async (req, res) => {
   } catch (error) {
     res
       .status(500)
-      .json({ error: "Error al crear el usuario", details: error.message });
+      .json({ error: "Error al crear el usuario 😵", details: error.message });
   }
 });
 
@@ -77,7 +77,7 @@ router.get(
   (req, res) => {
     console.log(req.user);
     res.status(200).json({
-      message: "Bienvenido",
+      message: "¡Te damos la bienvenida! 🤗",
       user: req.user,
     });
   }
@@ -86,7 +86,7 @@ router.get(
 router.get("/logout", (req, res) => {
   res.clearCookie("token");
   res.status(200).json({
-    message: "Sesión cerrada",
+    message: "Sesión cerrada, hasta pronto",
   });
 });
 

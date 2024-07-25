@@ -25,7 +25,7 @@ app.use(passport.initialize());
 mongoose
   .connect("mongodb://localhost:27017/after_class")
   .then(() =>  {
-    console.log("Conectado a MongoDB");
+    console.log("🚀 Conectado a MongoDB");
   })
   .catch((error) => {
     console.log(error);
@@ -37,5 +37,5 @@ app.use("/api/users", userRoutes);
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server is running on port: ${PORT}`);
+  console.log(`Servidor corriendo en el puerto 🏴‍☠️: ${PORT}`);
 });

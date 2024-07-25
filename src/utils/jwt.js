@@ -14,6 +14,6 @@ export function verifyToken(token) {
     const decoded = jwt.verify(token, PRIVATE_KEY);
     return decoded;
   } catch (error) {
-    throw new Error("Token no valido");
+    throw new Error("🧚🏻 Token no valido");
   }
 }

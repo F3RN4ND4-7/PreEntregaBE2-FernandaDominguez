@@ -21,11 +21,11 @@ const initializePassport = () => {
           const user = await userModel.findOne({ email });
 
           if (!user) {
-            return done(null, false, { message: "Usuario no encontrado" });
+            return done(null, false, { message: "No encontramos al usuario" });
           }
 
           if (!(await comparePassword(password, user.password))) {
-            return done(null, false, { message: "Contraseña incorrecta" });
+            return done(null, false, { message: "Ups, contraseña incorrecta" });
           }
 
           return done(null, user);
